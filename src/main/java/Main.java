@@ -13,9 +13,11 @@ public class Main {
         List<Leaf> leafQuercus = readerData.getLeafQuercus();
 
         Fisher fisher = new Fisher(leafAcer, leafQuercus);
-        FisherCoefficient maxFisherCoefficient = fisher.getOneMaxFisherCoefficient();
+        final long startTime = System.currentTimeMillis();
+        FisherCoefficient maxFisherCoefficient = fisher.getMaxFisherCoefficient(5);
+        final long endTime = System.currentTimeMillis();
         System.out.println(maxFisherCoefficient.toString());
-
+        System.out.println((endTime - startTime) / 1000.0);
 
     }
 }

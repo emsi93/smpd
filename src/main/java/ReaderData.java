@@ -38,7 +38,7 @@ public class ReaderData {
 
             Leaf leaf = new Leaf(name);
             for(int j=1; j<parts.length; j++)
-                    leaf.addFeature(Double.parseDouble(parts[j]));
+                    leaf.addFeature(new Feature(j-1, Double.parseDouble(parts[j])));
             leafs.add(leaf);
         }
     }

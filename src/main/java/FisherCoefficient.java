@@ -2,10 +2,10 @@ import java.util.Arrays;
 
 public class FisherCoefficient implements Comparable<FisherCoefficient>{
 
-    private int[] idFeatures;
+    private Integer[] idFeatures;
     private Double value;
 
-    public FisherCoefficient(double value, int... idFeature) {
+    public FisherCoefficient(double value, Integer... idFeature) {
         this.idFeatures = idFeature;
         this.value = value;
     }
