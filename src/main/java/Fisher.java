@@ -112,11 +112,11 @@ public class Fisher {
         return Math.sqrt(sum);
     }
 
-    private Matrix createCovarianceMatrix(Matrix x, Matrix u, int howManyFeatures) {
+    private Matrix createCovarianceMatrix(Matrix x, Matrix u, int n) {
         Matrix temp1 = x.minus(u);
         Matrix temp2 = temp1.transpose();
         Matrix temp3 = temp1.times(temp2);
-        return temp3.times(1.0 / howManyFeatures);
+        return temp3.times(1.0 / n);
     }
 
     private void countMeanAndStandardDeviation(List<Leaf> leafs, int i) {
@@ -148,8 +148,8 @@ public class Fisher {
     }
 
     private void determinateFisherCoeficcient(Matrix xA, Matrix uA, Matrix xB, Matrix uB, Matrix nominator, int howManyFeatures, Integer[] combinationFeatures) {
-        Matrix sA = createCovarianceMatrix(xA, uA, howManyFeatures);
-        Matrix sB = createCovarianceMatrix(xB, uB, howManyFeatures);
+        Matrix sA = createCovarianceMatrix(xA, uA, leafAcer.size());
+        Matrix sB = createCovarianceMatrix(xB, uB, leafQuercus.size());
         double fisher = lengthOfVector(nominator, howManyFeatures) / (sA.det() + sB.det());
         fisherCoefficients.add(new FisherCoefficient(fisher, combinationFeatures));
     }

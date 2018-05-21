@@ -36,7 +36,9 @@ public class ReaderData {
             String[] parts = records.get(i).split(",");
             String name = parts[0];
 
-            Leaf leaf = new Leaf(name);
+
+
+            Leaf leaf = new Leaf(name.split(" ")[0]);
             for(int j=1; j<parts.length; j++)
                     leaf.addFeature(new Feature(j-1, Double.parseDouble(parts[j])));
             leafs.add(leaf);
