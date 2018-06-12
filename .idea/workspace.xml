@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb8f5799-e96c-4cc5-9d60-4b70cd6c7992" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../smpd/src/main/java/SmallestAverageClassifier.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../smpd/target/classes/Fisher.class" afterPath="$PROJECT_DIR$/../smpd/target/classes/Fisher.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../smpd/target/classes/FisherCoefficient.class" afterPath="$PROJECT_DIR$/../smpd/target/classes/FisherCoefficient.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../smpd/target/classes/Main.class" afterPath="$PROJECT_DIR$/../smpd/target/classes/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../smpd/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../smpd/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../smpd/src/main/java/Fisher.java" afterPath="$PROJECT_DIR$/../smpd/src/main/java/Fisher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../smpd/src/main/java/FisherCoefficient.java" afterPath="$PROJECT_DIR$/../smpd/src/main/java/FisherCoefficient.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../smpd/src/main/java/Main.java" afterPath="$PROJECT_DIR$/../smpd/src/main/java/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../smpd/src/main/java/MyFrame.java" afterPath="$PROJECT_DIR$/../smpd/src/main/java/MyFrame.java" />
     </list>
     <ignored path="$PROJECT_DIR$/../smpd/out/" />
     <ignored path="$PROJECT_DIR$/../smpd/target/" />
@@ -17,13 +19,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/smpd$Main.coverage" NAME="Main Coverage Results" MODIFIED="1528311902031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NearestNeighborClassifier.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/NearestNeighborClassifier.java">
+      <file leaf-file-name="Fisher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/Fisher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="305">
+              <caret line="41" column="61" lean-forward="false" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -31,49 +36,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SmallestAverageClassifier.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/SmallestAverageClassifier.java">
+      <file leaf-file-name="FisherCoefficient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/FisherCoefficient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1241">
-              <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+            <state relative-caret-position="300">
+              <caret line="41" column="66" lean-forward="false" selection-start-line="41" selection-start-column="66" selection-end-line="41" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1264#1283#0" expanded="true" />
-                <element signature="e#1396#1404#0" expanded="true" />
+                <element signature="e#676#677#0" expanded="true" />
+                <element signature="e#709#710#0" expanded="true" />
+                <element signature="e#768#769#0" expanded="true" />
+                <element signature="e#812#813#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReaderData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/ReaderData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="40" column="53" lean-forward="false" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="41" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyFrame.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/MyFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1382">
-              <caret line="108" column="27" lean-forward="false" selection-start-line="108" selection-start-column="27" selection-end-line="108" selection-end-column="27" />
+            <state relative-caret-position="240">
+              <caret line="27" column="78" lean-forward="false" selection-start-line="27" selection-start-column="78" selection-end-line="27" selection-end-column="78" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1528320109414" expanded="true" signature="159:372" ph="..." />
+                <marker date="1528320109414" expanded="true" signature="497:886" ph="..." />
               </folding>
             </state>
           </provider>
@@ -100,6 +86,9 @@
       <find>init</find>
       <find>valuesList</find>
       <find>sizeOfTestList</find>
+      <find>countMeanAndStandardDeviation</find>
+      <find>combinationFeaturescombinationFeatures</find>
+      <find>determinateFisherCoeficcient</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -117,11 +106,9 @@
         <option value="$PROJECT_DIR$/../smpd/src/main/java/FisherCoefficien.java" />
         <option value="$PROJECT_DIR$/../smpd/src/main/java/Leaf.java" />
         <option value="$PROJECT_DIR$/../smpd/src/main/java/Feature.java" />
-        <option value="$PROJECT_DIR$/../smpd/src/main/java/FisherCoefficient.java" />
         <option value="$PROJECT_DIR$/../smpd/src/main/java/Combination.java" />
         <option value="$PROJECT_DIR$/../smpd/pom.xml" />
         <option value="$PROJECT_DIR$/../smpd/src/main/java/window/MyFrame.java" />
-        <option value="$PROJECT_DIR$/../smpd/src/main/java/Fisher.java" />
         <option value="$PROJECT_DIR$/../smpd/src/main/java/classifiers/NearestNeighborClassifier.java" />
         <option value="$PROJECT_DIR$/../smpd/src/main/java/ReaderData.java" />
         <option value="$PROJECT_DIR$/../smpd/src/main/java/NearestNeighborObject.java" />
@@ -129,9 +116,12 @@
         <option value="$PROJECT_DIR$/../smpd/src/main/java/CardLayoutDemo.java" />
         <option value="$PROJECT_DIR$/../smpd/src/main/java/TabDemo.java" />
         <option value="$PROJECT_DIR$/../smpd/src/main/java/NearestNeighborClassifier.java" />
-        <option value="$PROJECT_DIR$/../smpd/src/main/java/SmallestAverageClassifier.java" />
-        <option value="$PROJECT_DIR$/../smpd/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/../smpd/src/main/java/MyFrame.java" />
+        <option value="$PROJECT_DIR$/../smpd/src/main/java/SmallestAverageClassifier.java" />
+        <option value="$PROJECT_DIR$/../smpd/src/main/java/SFS.java" />
+        <option value="$PROJECT_DIR$/../smpd/src/main/java/FisherCoefficient.java" />
+        <option value="$PROJECT_DIR$/../smpd/src/main/java/Fisher.java" />
+        <option value="$PROJECT_DIR$/../smpd/src/main/java/Main.java" />
       </list>
     </option>
   </component>
@@ -141,7 +131,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="100" />
     <option name="y" value="20" />
     <option name="width" value="1398" />
@@ -162,9 +152,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,6 +187,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -381,16 +371,17 @@
       <workItem from="1526799069893" duration="10107000" />
       <workItem from="1526912873220" duration="2485000" />
       <workItem from="1527237890085" duration="4250000" />
-      <workItem from="1528214109696" duration="6444000" />
+      <workItem from="1528214109696" duration="7113000" />
+      <workItem from="1528273940943" duration="2474000" />
+      <workItem from="1528300244737" duration="16840000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60845000" />
+    <option name="totallyTimeSpent" value="80828000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <frame x="100" y="20" width="1398" height="820" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -401,19 +392,20 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17702703" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2850877" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27249357" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22122571" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35675675" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -451,7 +443,7 @@
           <option name="timeStamp" value="71" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="72" />
+      <option name="time" value="108" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -459,18 +451,11 @@
         <watch expression="matrixA" />
         <watch expression="matrixA.A[0]" />
         <watch expression="this" />
+        <watch expression="xQuercus[0]" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../smpd/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="76" lean-forward="false" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/Fisher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2567">
@@ -500,7 +485,7 @@
         <state relative-caret-position="816">
           <caret line="52" column="42" lean-forward="false" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -510,7 +495,7 @@
         <state relative-caret-position="136">
           <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -526,7 +511,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="60" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="60" />
-          <folding />
+          <folding>
+            <marker date="1528320109414" expanded="true" signature="159:372" ph="..." />
+            <marker date="1528320109414" expanded="true" signature="497:886" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -576,7 +564,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="60" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="60" />
-          <folding />
+          <folding>
+            <marker date="1528320109414" expanded="true" signature="159:372" ph="..." />
+            <marker date="1528320109414" expanded="true" signature="497:886" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -592,7 +583,7 @@
         <state relative-caret-position="1139">
           <caret line="67" column="98" lean-forward="false" selection-start-line="67" selection-start-column="98" selection-end-line="67" selection-end-column="98" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -616,7 +607,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="81" lean-forward="false" selection-start-line="16" selection-start-column="81" selection-end-line="16" selection-end-column="81" />
-          <folding />
+          <folding>
+            <marker date="1528320109414" expanded="true" signature="159:372" ph="..." />
+            <marker date="1528320109414" expanded="true" signature="497:886" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -650,7 +644,7 @@
         <state relative-caret-position="969">
           <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="67" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -676,7 +670,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="82" lean-forward="false" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
-          <folding />
+          <folding>
+            <marker date="1528320109414" expanded="true" signature="159:372" ph="..." />
+            <marker date="1528320109414" expanded="true" signature="497:886" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -694,13 +691,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/gov/nist/math/jama/1.0.3/jama-1.0.3.jar!/Jama/Matrix.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1836">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -754,20 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/FisherCoefficient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="52" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/src.zip!/java/util/Comparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="149" column="8" lean-forward="false" selection-start-line="149" selection-start-column="8" selection-end-line="149" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/MyFrame2.java" />
     <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/CardLayoutDemo.java" />
     <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/TabDemo.java" />
@@ -783,7 +759,7 @@
         <state relative-caret-position="561">
           <caret line="40" column="53" lean-forward="false" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -792,16 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/Fisher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -823,42 +789,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/NearestNeighborClassifier.java">
+    <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/MyFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/SmallestAverageClassifier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+        <state relative-caret-position="212">
+          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1264#1283#0" expanded="true" />
-            <element signature="e#1396#1404#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/NearestNeighborClassifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/src.zip!/java/util/Comparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="149" column="8" lean-forward="false" selection-start-line="149" selection-start-column="8" selection-end-line="149" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/gov/nist/math/jama/1.0.3/jama-1.0.3.jar!/Jama/Matrix.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/SFS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/Fisher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="41" column="61" lean-forward="false" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/FisherCoefficient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="41" column="66" lean-forward="false" selection-start-line="41" selection-start-column="66" selection-end-line="41" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#709#710#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#812#813#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="41" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../smpd/src/main/java/MyFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1382">
-          <caret line="108" column="27" lean-forward="false" selection-start-line="108" selection-start-column="27" selection-end-line="108" selection-end-column="27" />
+        <state relative-caret-position="240">
+          <caret line="27" column="78" lean-forward="false" selection-start-line="27" selection-start-column="78" selection-end-line="27" selection-end-column="78" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1528320109414" expanded="true" signature="159:372" ph="..." />
+            <marker date="1528320109414" expanded="true" signature="497:886" ph="..." />
           </folding>
         </state>
       </provider>

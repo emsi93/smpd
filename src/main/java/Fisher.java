@@ -14,18 +14,23 @@ public class Fisher {
     private List<Double> meanQuercus;
     private List<Double> standardDeviationAcer;
     private List<Double> standardDeviationQuercus;
-    private List<FisherCoefficient> fisherCoefficients;
 
 
     public Fisher(List<Leaf> leafAcer, List<Leaf> leafQuercus) {
         this.leafAcer = leafAcer;
         this.leafQuercus = leafQuercus;
         numberOfFeatures = leafAcer.get(0).getFeatures().size();
+
+        initFields();
+
+        for (int i = 0; i < numberOfFeatures; i++) {
+            countMeanAndStandardDeviation(leafAcer, i);
+            countMeanAndStandardDeviation(leafQuercus, i);
+        }
     }
 
-    public FisherCoefficient getMaxFisherCoefficient(int howManyFeatures){
-        initFields();
-        if ( howManyFeatures > 1)
+    public FisherCoefficient getMaxFisherCoefficient(int howManyFeatures) {
+        if (howManyFeatures > 1)
             return getMaxFisherCoefficientForKfeatures(howManyFeatures);
         else
             return getMaxFisherCoefficientForOneFeature();
@@ -33,27 +38,42 @@ public class Fisher {
 
     private FisherCoefficient getMaxFisherCoefficientForOneFeature() {
 
-        for (int i = 0; i < numberOfFeatures; i++) {
-            countMeanAndStandardDeviation(leafAcer, i);
-            countMeanAndStandardDeviation(leafQuercus, i);
-        }
-
-        determinateFisherCoefficient();
+        List<FisherCoefficient> fisherCoefficients = determinateFisherCoefficient();
         fisherCoefficients.sort(FisherCoefficient::compareTo);
         return fisherCoefficients.get(0);
 
     }
 
-    private FisherCoefficient getMaxFisherCoefficientForKfeatures(int howManyFeatures) {
+    public FisherCoefficient getMaxFisherCoefficientForKfeatures(FisherCoefficient fisherCoefficient, int howManyFeatures) {
 
-        Integer[][] combinationFeatures = Combination.generate(64, howManyFeatures);
-        double[][] mAcer, mQuercus, xAcer, xQuercus, uAcer, uQuercus;
+        List<FisherCoefficient> fishers = null;
+        FisherCoefficient temp = fisherCoefficient;
+        for(int i = 1; i<howManyFeatures; i++){
 
-        for (int i = 0; i < numberOfFeatures; i++) {
-            countMeanAndStandardDeviation(leafAcer, i);
-            countMeanAndStandardDeviation(leafQuercus, i);
+            if (fishers != null)
+                temp = fishers.get(0);
+            fishers = new ArrayList<>();
+            for(int j=0; j<numberOfFeatures; j++){
+                if (temp.getIdFeatures().contains(j))
+                    continue;
+                temp.getIdFeatures().add(j);
+                Integer[][] combinationFeatures = new Integer[1][temp.getIdFeatures().size()];
+                for(int k=0; k<temp.getIdFeatures().size(); k++)
+                    combinationFeatures[0][k] = temp.getIdFeatures().get(k);
+
+                fishers.addAll(countFisherForCombination(combinationFeatures,  temp.getIdFeatures().size()));
+                temp.getIdFeatures().remove(temp.getIdFeatures().size() - 1);
+            }
+
+            fishers.sort(FisherCoefficient::compareTo);
         }
 
+        return fishers.get(0);
+    }
+
+    private List<FisherCoefficient> countFisherForCombination( Integer[][] combinationFeatures, int howManyFeatures){
+        double[][] mAcer, mQuercus, xAcer, xQuercus, uAcer, uQuercus;
+        List<FisherCoefficient> fisherCoefficients = new ArrayList<>();
         for (int i = 0; i < combinationFeatures.length; i++) {
             mAcer = new double[howManyFeatures][1];
             mQuercus = new double[howManyFeatures][1];
@@ -87,12 +107,16 @@ public class Fisher {
             Matrix uA = new Matrix(uAcer);
             Matrix uB = new Matrix(uQuercus);
 
-            determinateFisherCoeficcient(xA, uA, xB, uB, nominator, howManyFeatures, combinationFeatures[i]);
+            fisherCoefficients.add(determinateFisherCoeficcient(xA, uA, xB, uB, nominator, howManyFeatures, combinationFeatures[i]));
         }
+        return fisherCoefficients;
+    }
 
+    private FisherCoefficient getMaxFisherCoefficientForKfeatures(int howManyFeatures) {
+        Integer[][] combinationFeatures = Combination.generate(64, howManyFeatures);
+        List<FisherCoefficient> fisherCoefficients = countFisherForCombination(combinationFeatures, howManyFeatures);
         fisherCoefficients.sort(FisherCoefficient::compareTo);
         return fisherCoefficients.get(0);
-
     }
 
     private void initFields() {
@@ -101,7 +125,6 @@ public class Fisher {
         meanQuercus = new ArrayList<>();
         standardDeviationAcer = new ArrayList<>();
         standardDeviationQuercus = new ArrayList<>();
-        fisherCoefficients = new ArrayList<>();
     }
 
     private double lengthOfVector(Matrix matrix, int howManyFeatures) {
@@ -137,20 +160,29 @@ public class Fisher {
         }
     }
 
-    private void determinateFisherCoefficient() {
+    private List<FisherCoefficient> determinateFisherCoefficient() {
         double nominator, denominator;
+        List<FisherCoefficient> fisherCoefficients = new ArrayList<>();
         for (int i = 0; i < numberOfFeatures; i++) {
             nominator = Math.abs(meanAcer.get(i) - meanQuercus.get(i));
             denominator = standardDeviationAcer.get(i) + standardDeviationQuercus.get(i);
 
             fisherCoefficients.add(new FisherCoefficient(nominator / denominator, i));
         }
+        return fisherCoefficients;
     }
 
-    private void determinateFisherCoeficcient(Matrix xA, Matrix uA, Matrix xB, Matrix uB, Matrix nominator, int howManyFeatures, Integer[] combinationFeatures) {
+    private FisherCoefficient determinateFisherCoeficcient(Matrix xA, Matrix uA, Matrix xB, Matrix uB, Matrix nominator, int howManyFeatures, Integer[] combinationFeatures) {
+        return new FisherCoefficient(countFisherValue(xA, uA, xB, uB, nominator, howManyFeatures), combinationFeatures);
+    }
+
+    private FisherCoefficient determinateFisherCoeficcient(Matrix xA, Matrix uA, Matrix xB, Matrix uB, Matrix nominator, int howManyFeatures, List<Integer> idFeatures) {
+        return new FisherCoefficient(countFisherValue(xA, uA, xB, uB, nominator, howManyFeatures), idFeatures);
+    }
+
+    private double countFisherValue(Matrix xA, Matrix uA, Matrix xB, Matrix uB, Matrix nominator, int howManyFeatures){
         Matrix sA = createCovarianceMatrix(xA, uA, leafAcer.size());
         Matrix sB = createCovarianceMatrix(xB, uB, leafQuercus.size());
-        double fisher = lengthOfVector(nominator, howManyFeatures) / (sA.det() + sB.det());
-        fisherCoefficients.add(new FisherCoefficient(fisher, combinationFeatures));
+        return lengthOfVector(nominator, howManyFeatures) / (sA.det() + sB.det());
     }
 }
