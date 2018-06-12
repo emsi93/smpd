@@ -8,7 +8,7 @@ import java.util.List;
 public class MyFrame extends JFrame {
 
 
-    final static String FISHER = "FISHER";
+    final static String FISHER = "FISHER/SFS";
     final static String NN = "NN";
     final static String NM = "NM";
 
@@ -16,6 +16,9 @@ public class MyFrame extends JFrame {
     static final int FPS_MAX = 50;
 
     private JFileChooser fc;
+    private JRadioButton sfs;
+    private JRadioButton fisher;
+    private ButtonGroup bG;
     private JButton openFile;
     private JButton openFile2;
     private JButton openFile3;
@@ -111,12 +114,23 @@ public class MyFrame extends JFrame {
         });
 
         process.addActionListener(e -> {
-            fisherCoefficient = null;
-            Fisher fisher = new Fisher(leafAcer, leafQuercus);
-            final long startTime = System.currentTimeMillis();
-            fisherCoefficient = fisher.getMaxFisherCoefficient(howManyFeatures);
-            final long stopTime = System.currentTimeMillis();
-            textArea.setText(fisherCoefficient.toString() + "\n" + (stopTime - startTime) / 1000.0) ;
+            FisherCoefficient maxFisherCoefficient = null;
+            if( fisher.isSelected()){
+                Fisher fisher = new Fisher(leafAcer, leafQuercus);
+                final long startTime = System.currentTimeMillis();
+                maxFisherCoefficient = fisher.getMaxFisherCoefficient(howManyFeatures);
+                final long stopTime = System.currentTimeMillis();
+                textArea.setText("FISHER\n" + maxFisherCoefficient.toString() + "\n" + (stopTime - startTime) / 1000.0) ;
+            }
+
+            if(sfs.isSelected()){
+                SFS sfs = new SFS(leafAcer, leafQuercus);
+                final long startTime = System.currentTimeMillis();
+                maxFisherCoefficient = sfs.getMaxFisherCoefficient(howManyFeatures);
+                final long endTime = System.currentTimeMillis();
+                textArea.setText("SFS\n" + maxFisherCoefficient.toString() + "\n" + (endTime - startTime) / 1000.0) ;
+            }
+
         });
 
         process2.addActionListener(e -> {
@@ -176,6 +190,13 @@ public class MyFrame extends JFrame {
         valuesList3 = new JComboBox(values3);
         labelForValuesList = new JLabel("k:");
 
+        sfs = new JRadioButton("SFS");
+        fisher = new JRadioButton("FISHER");
+        bG = new ButtonGroup();
+        fisher.setSelected(true);
+        bG.add(sfs);
+        bG.add(fisher);
+
     }
 
     private JPanel buildContent(){
@@ -188,6 +209,8 @@ public class MyFrame extends JFrame {
         panel.add(panelSouth, BorderLayout.SOUTH);
 
         panelNorth.add(openFile);
+        panelNorth.add(sfs);
+        panelNorth.add(fisher);
         panelNorth.add(labelForValuesList);
         panelNorth.add(valuesList);
         panelNorth.add(process);
